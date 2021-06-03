@@ -19,12 +19,8 @@ function MenuPage(props) {
       <LightLink onClick={() => GoTo(history, "/listingredient")}>
         Lista składników
       </LightLink>
-      <LightLink onClick={() => GoTo(history, "/listdevices")}>
-        Lista urządzeń
-      </LightLink>
       <LightLink onClick={() => GoTo(history, "/recipes")}>Przepisy</LightLink>
       <div style={{ position: "absolute", bottom: 0, width: "100%" }}>
-        <DarkLink>Ustawienia</DarkLink>
         <DarkLink onClick={() => GoTo(history, "/")}>Wyloguj</DarkLink>
       </div>
     </CenterBoxColumnBetween>
