@@ -11,23 +11,29 @@ const uri =
   "mongodb+srv://root:SILNEhaslo123@cluster0.fegii.mongodb.net/cluster0?retryWrites=true&w=majority";
 
 app.use("/recipes", jsonParser, async (req, res) => {
-  let skladnikiTab = req.body.map((skladnik) => {
-    return skladnik.name;
-  });
-  console.log(skladnikiTab);
-  const client = await MongoClient.connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-  const db = client.db("recipesDB");
 
-  const collection = await db.collection("recipes").find({}).toArray();
+  // if(req.body == null || JSON.stringify(req.body) == "{}"){
+  //   res.status(404).send("Pusta lista skladnikow");
+  // } else {
 
-  // console.log(collection);
+    // let skladnikiTab = req.body.map((skladnik) => {
+    //   return skladnik.name;
+    // });
+    // console.log(skladnikiTab);
+    const client = await MongoClient.connect(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    const db = client.db("recipesDB");
 
-  client.close();
+    const collection = await db.collection("recipes").find({}).toArray();
 
-  res.json(collection).send();
+    // console.log(collection);
+
+    client.close();
+
+    res.json(collection).send();
+  // }
 });
 
 app.listen(PORT, () => {
