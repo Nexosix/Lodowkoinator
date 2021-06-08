@@ -1,7 +1,7 @@
-Aby postawić cały system, należy uruchomić dwie konsole.
- 
 Należy w pierwszej kolejności zainstalować na komputerze [NodeJS](https://nodejs.org/en/)
 ##### Wersja LTS (14.17.0)
+
+Aby postawić cały system, należy uruchomić dwie konsole.
 
 # Konsola 1 (FrontEnd)
 1. Przejść do folderu lodowkoinator
