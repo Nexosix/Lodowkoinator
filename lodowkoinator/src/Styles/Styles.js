@@ -191,7 +191,28 @@ export const IngredientListUL = styled.ul`
   gap: 1rem;
   padding: 0;
   font-size: 2rem;
-  overflow: scroll;
+  overflow-x: hidden;
+  margin-top: 7rem;
+
+  & li {
+    padding: 1.4rem 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+    background-color: ${colors.liColor};
+    list-style: none;
+  }
+`;
+
+export const RecipeListUL = styled.ul`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  font-size: 2rem;
   overflow-x: hidden;
   margin-top: 7rem;
 
